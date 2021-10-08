@@ -66,10 +66,6 @@ public class ContactDetails {
 		this.email = email;
 	}
 
-	/*
-	 * Declaring The To String Method The toString() method returns the string
-	 * representation of the object
-	 */
 	@Override
 	public String toString() {
 		return "firstName= " + firstName + '\'' + "lastName=" + lastName + '\'' + " addressCity=" + addressCity + '\''
