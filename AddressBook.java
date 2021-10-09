@@ -8,7 +8,7 @@ public class AddressBook {
 	ContactDetails person = new ContactDetails();
 
 	public void addContact() {
-
+		// contactDetails person = new contactDetails();
 		System.out.println("Enter First Name: ");
 		String firstName = sc.nextLine();
 		System.out.println("Enter last Name: ");
@@ -36,13 +36,22 @@ public class AddressBook {
 	}
 
 	public void editContact() {
-
+		// Scanner editName = new Scanner(System.in);
 		System.out.println("Enter the firstName of person");
 		String editName = sc.nextLine();
-		if (editName.equalsIgnoreCase(person.getFirstName()))
+		if (editName.equals(person.getFirstName()))
 			addContact();
 		else
 			System.out.println("The Entered First Name Is Not Match");
 		editContact();
+	}
+
+	public void deleteContact() {
+		System.out.println("Enter firstName of the person");
+		String deleteName = sc.nextLine();
+		if (deleteName.equals(person.getFirstName())) {
+			System.out.println("Deleted " + person.getFirstName() + " details");
+			person = null;
+		}
 	}
 }
